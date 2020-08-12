@@ -11,9 +11,9 @@ require (
 	github.com/rogpeppe/go-internal v1.6.0
 	github.com/stretchr/testify v1.4.0 // indirect
 	golang.org/x/sync v0.0.0-20200625203802-6e8e738ad208
-	golang.org/x/sys v0.0.0-20200625212154-ddb9806d33ae
+	golang.org/x/sys v0.0.0-20200812155832-6a926be9bd1d
 	golang.org/x/term v0.0.0-20191110171634-ad39bd3f0407
-	golang.org/x/xerrors v0.0.0-20191204190536-9bdfabe68543
+	golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1
 	gopkg.in/check.v1 v1.0.0-20190902080502-41f04d3bba15 // indirect
 	mvdan.cc/editorconfig v0.1.1-0.20200121172147-e40951bde157
 )

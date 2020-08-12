@@ -1,0 +1,50 @@
+# github.com/creack/pty v1.1.11
+## explicit
+github.com/creack/pty
+# github.com/google/renameio v0.1.0
+## explicit
+github.com/google/renameio
+# github.com/kr/pretty v0.2.0
+## explicit
+github.com/kr/pretty
+# github.com/kr/text v0.2.0
+## explicit
+github.com/kr/text
+# github.com/pkg/diff v0.0.0-20190930165518-531926345625
+## explicit
+github.com/pkg/diff
+# github.com/rogpeppe/go-internal v1.6.0
+## explicit
+github.com/rogpeppe/go-internal/imports
+github.com/rogpeppe/go-internal/internal/os/execpath
+github.com/rogpeppe/go-internal/internal/textutil
+github.com/rogpeppe/go-internal/par
+github.com/rogpeppe/go-internal/testenv
+github.com/rogpeppe/go-internal/testscript
+github.com/rogpeppe/go-internal/txtar
+# github.com/stretchr/testify v1.4.0
+## explicit
+# golang.org/x/sync v0.0.0-20200625203802-6e8e738ad208
+## explicit
+golang.org/x/sync/errgroup
+# golang.org/x/sys v0.0.0-20200812155832-6a926be9bd1d
+## explicit
+golang.org/x/sys/internal/unsafeheader
+golang.org/x/sys/plan9
+golang.org/x/sys/unix
+golang.org/x/sys/windows
+# golang.org/x/term v0.0.0-20191110171634-ad39bd3f0407
+## explicit
+golang.org/x/term
+# golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1
+## explicit
+golang.org/x/xerrors
+golang.org/x/xerrors/internal
+# gopkg.in/check.v1 v1.0.0-20190902080502-41f04d3bba15
+## explicit
+# gopkg.in/errgo.v2 v2.1.0
+gopkg.in/errgo.v2/errors
+gopkg.in/errgo.v2/fmt/errors
+# mvdan.cc/editorconfig v0.1.1-0.20200121172147-e40951bde157
+## explicit
+mvdan.cc/editorconfig
