@@ -11,7 +11,7 @@ require (
 	github.com/rogpeppe/go-internal v1.6.0
 	github.com/stretchr/testify v1.4.0 // indirect
 	golang.org/x/sync v0.0.0-20200625203802-6e8e738ad208
-	golang.org/x/sys v0.0.0-20200812155832-6a926be9bd1d
+	golang.org/x/sys v0.0.0-20200826173525-f9321e4c35a6
 	golang.org/x/term v0.0.0-20191110171634-ad39bd3f0407
 	golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1
 	gopkg.in/check.v1 v1.0.0-20190902080502-41f04d3bba15 // indirect
