@@ -327,20 +327,11 @@ func (p *Printer) semiOrNewl(s string, pos Pos) {
 }
 
 func (p *Printer) writeLit(s string) {
-	if !strings.Contains(s, "\t") {
-		p.WriteString(s)
-		return
+	if strings.Contains(s, "\t") {
+		p.WriteByte(tabwriter.Escape)
+		defer p.WriteByte(tabwriter.Escape)
 	}
-	p.WriteByte(tabwriter.Escape)
-	for i := 0; i < len(s); i++ {
-		b := s[i]
-		if b != '\t' {
-			p.WriteByte(b)
-			continue
-		}
-		p.WriteByte(b)
-	}
-	p.WriteByte(tabwriter.Escape)
+	p.WriteString(s)
 }
 
 func (p *Printer) incLevel() {
@@ -790,6 +781,7 @@ func (p *Printer) testExpr(expr TestExpr) {
 		p.testExpr(x.X)
 	case *ParenTest:
 		p.WriteByte('(')
+		p.wantSpace = startsWithLparen(x.X)
 		p.testExpr(x.X)
 		p.WriteByte(')')
 	}
@@ -1194,12 +1186,16 @@ func (p *Printer) ifClause(ic *IfClause, elif bool) {
 	p.semiRsrv("fi", ic.FiPos)
 }
 
-func startsWithLparen(s *Stmt) bool {
-	switch x := s.Cmd.(type) {
-	case *Subshell:
-		return true
+func startsWithLparen(node Node) bool {
+	switch node := node.(type) {
+	case *Stmt:
+		return startsWithLparen(node.Cmd)
 	case *BinaryCmd:
-		return startsWithLparen(x.X)
+		return startsWithLparen(node.X)
+	case *Subshell:
+		return true // keep ( (
+	case *ArithmCmd:
+		return true // keep ( ((
 	}
 	return false
 }
