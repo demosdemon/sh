@@ -2,6 +2,7 @@
 
 set -eux
 
+rm -rf vendor
 go get -u ./...
 go mod tidy
 go mod vendor -v
